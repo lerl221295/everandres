@@ -298,7 +298,7 @@
 
 <script>
 	let i = 0
-	const images = [68, 3, 11, 63]
+	const images = ['DSC_0155-min.jpg', 'EA84-app.jpg']
 
 	var w = window,
 		d = document,
@@ -313,15 +313,15 @@
 		}, 100)
 	});
 
-	// setInterval(() => {
-	// 	if (i === images.length) {
-	// 		i = 0
-	// 	}
-	// 	$("#slider-background").fadeTo(500, 0.30, () => {
-	// 		$("#slider-background").css("background-image", `url('images/Gaby(${images[i]})${isMobile ? '-app' : ''}.jpg')`);
-	// 		i++;
-	// 	}).fadeTo(500, 1);
-	// }, 4000);
+	setInterval(() => {
+		if (i === images.length) {
+			i = 0
+		}
+		$("#slider-background").fadeTo(500, 0.30, () => {
+			$("#slider-background").css("background-image", `url('images/${images[i]}')`);
+			i++;
+		}).fadeTo(500, 1);
+	}, 4000);
 </script>
 
 <script>
